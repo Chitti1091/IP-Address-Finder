@@ -1,12 +1,4 @@
 # IP-Address-Finder
-With the help of splay tree data structure, we would create a tree whose nodes are
-embedded with the Ip address of the device that are connect to a specific network router. In our
-code we have taken 11 devices connected to one network router and so there would be some
-common part in the Ip address of each of the devices. Now, router gets some specific data
-packets from the net which is supposed to be given to a specified device and so it uses searching
-operation to find the correct Ip address. To increase the speed of this process we use splay tress
-for searching and inserting the Ip addresses. It is the fastest data structure for searching
-operation. Therefore, the router sends the data packet to the specified Ip address when multiple
-devices are connected. Here we have used the random function to input the data packets so that
-there is no input function required and the processes is completely automatic as it takes place in
-network router.
+Using a splay tree data structure, we can create a tree where each node represents the IP address of a device connected to a specific network router. In this implementation, we assume 11 devices are connected to a single router. Since all devices share a common network prefix in their IP addresses, only the unique portions of the addresses are stored in the nodes.
+When the router receives specific data packets from the internet, it needs to forward them to the correct device based on its IP address. To optimize this process, we use a splay tree, which is one of the fastest data structures for search and insert operations. The splay tree reorganizes itself during searches, ensuring that frequently accessed IP addresses are moved closer to the root, thus speeding up future operations.
+This implementation also uses a random function to generate data packets, eliminating the need for manual input. The process is fully automated, simulating how a router dynamically routes data packets to devices in a real-world network. By leveraging the efficiency of splay trees, the router can quickly locate and send data packets to the appropriate device, even when multiple devices are connected to the same network.
